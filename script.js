@@ -1345,7 +1345,7 @@
               }
               break;
             case 7:
-            if (objetCv){
+            if (objetCv.unlock){
               $('#cv').click(); // click via JQuery sur l'onglet CV lorsque le perso passe dessus
             }
           }

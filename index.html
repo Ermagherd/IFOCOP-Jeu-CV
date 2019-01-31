@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="icon" href="./img/logo.png">
+  <title>JEU CV</title>
+</head>
+
+<body>
+  <header id="header">
+    <img src="./img/logo.png" alt="logo" id="logo">
+  </header>
+  <nav>
+    <ul>
+      <li id="accueil"></li> 
+      <li id="cv"></li> 
+      <li id="contact" ></li> 
+    </ul>
+  </nav>
+  <div id="tutoriel">
+    <img src="./img/tutoriel.png" alt="tutoriel"><br>
+    <div id="go-tuto"></div>
+  </div>
+  <div>
+    <canvas id="canvas">
+    </canvas>
+  </div>
+  <div>
+      <object data="./docs/cv_IFOCOP.pdf" type="application/pdf">
+          alt : <a href="./docs/cv_IFOCOP.pdf">test.pdf</a>
+      </object>
+  </div>
+  <div id="formulaire-contact">
+    <div id="bloc-formulaire">
+      <form action="" name="formulaire">
+        <div>
+          <label for="nom">Votre nom</label>
+          <input type="text" name="nom">
+        </div>
+        <div>
+          <label for="email">Votre addresse mail</label>
+          <input type="email" name="email">
+        </div>
+        <div>
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message" rows="10" cols="40">
+          </textarea>
+        </div>
+      </form>
+    </div style="width: 400px;">    
+      <div id="envoyer"></div>
+  </div>
+
+
+  <!-- <div id="loader"></div> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

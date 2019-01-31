@@ -3,7 +3,13 @@
 
   window.addEventListener('DOMContentLoaded', function () {
 
-    $("#go-tuto").click(function(){
+    ///////////////////////////////////////////////////////////////
+    /////                  NAVIGATION ONE PAGE                /////
+    ///////////////////////////////////////////////////////////////
+
+
+    $("#go-tuto").click(function(e){
+      e.preventDefault();
       $("#tutoriel").animate({opacity: "0"});
       setTimeout(() => {
         $("#tutoriel").css({display: "none"});      
@@ -26,6 +32,12 @@
       $("#canvas").css("display", "none");
       $("object").css("display", "none");
       $("#formulaire-contact").css("display", "inline-block");
+    });
+
+    $("#accueil").click();
+
+    $("#linkedin").click(function(){
+      window.open('https://www.linkedin.com/in/pierre-fouch%C3%A9/', '_blank', 'toolbar=0,location=0,menubar=0');
     });
 
     ///////////////////////////////////////////////////////////////
@@ -87,6 +99,7 @@
           case 38: // fleche haute
           case 90: // Z FR
           case 87: // W QWERTY
+          case 32: // ESPACE
             controls.haut = defKey;
             break;
           case 39: // fleche droite
@@ -100,7 +113,7 @@
           case 13: // ENTREE
             controls.hit = defKey;
             break;
-          case 32: // ESPACE
+          case 82: // R
             controls.revive = defKey;
             break;
           case 76: // L // SECRET
@@ -1396,7 +1409,7 @@
       ctx.drawImage(youDiedScreen.contenu, 0 - zoomMessage / 2, 0 - zoomMessage / 2, 900 + zoomMessage, 480 + zoomMessage);
       ctx.fillStyle = "rgb(255, 255, 255)";
       ctx.font = "20px VT323"
-      ctx.fillText("Appuyez sur ESPACE pour continuer.", 320, 464);
+      ctx.fillText("Appuyez sur R pour continuer.", 340, 464);
       ctx.restore();
     };
 

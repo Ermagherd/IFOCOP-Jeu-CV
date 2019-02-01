@@ -3,6 +3,10 @@
 
   window.addEventListener('DOMContentLoaded', function () {
 
+    ///////////////////////////////////////////////////////////////
+    /////               GESTION DE LA NAV ONE PAGE            /////
+    ///////////////////////////////////////////////////////////////
+
     $("#go-tuto").click(function(e){
       e.preventDefault();
       $("#tutoriel").animate({opacity: "0"});
@@ -94,6 +98,7 @@
           case 38: // fleche haute
           case 90: // Z FR
           case 87: // W QWERTY
+          case 32: // ESPACE
             controls.haut = defKey;
             break;
           case 39: // fleche droite
@@ -107,7 +112,7 @@
           case 13: // ENTREE
             controls.hit = defKey;
             break;
-          case 32: // ESPACE
+          case 82: // R
             controls.revive = defKey;
             break;
           case 76: // L // SECRET
@@ -233,6 +238,9 @@
 
     var bgMontagnesDouble = elementImage(900, 506, 0, 0, 0);
     bgMontagnesDouble.contenu.src = "img/mountains.png";
+
+    var bulle = elementImage(390, 105, 0, 0, 0);
+    bulle.contenu.src = "img/bulle.png";
 
     // Déclaration du sprite pour les arbre du décor
     var arbres = elementImage(750, 256, 0, 0, 0);
@@ -1349,6 +1357,35 @@
             case 6: // Si toutes les potions ont été récupérées, debloque le coffre
               if (potionsRecuperees.potionRougeRecup && potionsRecuperees.potionBleueRecup && potionsRecuperees.potionVerteRecup && potionsRecuperees.potionJauneRecup && potionsRecuperees.potionVioletteRecup){
               objetCoffre.unlock = true;
+              } else {
+                
+                // verif du nombre potions à récupérer pour débloquer le coffre
+                var compteurPotions = 5;
+
+                if (potionsRecuperees.potionRougeRecup){
+                  compteurPotions -= 1;
+                }
+                if (potionsRecuperees.potionBleueRecup){
+                  compteurPotions -= 1;
+                }
+                if (potionsRecuperees.potionVerteRecup){
+                  compteurPotions -= 1;
+                }
+                if (potionsRecuperees.potionJauneRecup){
+                  compteurPotions -= 1;
+                }
+                if (potionsRecuperees.potionVioletteRecup){
+                  compteurPotions -= 1;
+                }
+
+                ctx.save();
+                ctx.drawImage(bulle.contenu, 405, 100);
+                ctx.fillStyle = "rgb(0, 0, 0)";
+                ctx.font = "32px VT323"
+                ctx.fillText("Il te manque " + compteurPotions + " potions", 455, 145);
+                ctx.fillText("Pour débloquer le coffre !", 442, 177);
+                ctx.restore();
+
               }
               break;
             case 7:
@@ -1403,7 +1440,7 @@
       ctx.drawImage(youDiedScreen.contenu, 0 - zoomMessage / 2, 0 - zoomMessage / 2, 900 + zoomMessage, 480 + zoomMessage);
       ctx.fillStyle = "rgb(255, 255, 255)";
       ctx.font = "20px VT323"
-      ctx.fillText("Appuyez sur ESPACE pour continuer.", 320, 464);
+      ctx.fillText("Appuyez sur R pour continuer.", 342, 464);
       ctx.restore();
     };
 

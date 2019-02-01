@@ -1378,11 +1378,19 @@
                   compteurPotions -= 1;
                 }
 
+                var potionsPluriels;
+
+                if (compteurPotions === 1){
+                  potionsPluriels = " potion"
+                } else {
+                  potionsPluriels = " potions"
+                }
+
                 ctx.save();
                 ctx.drawImage(bulle.contenu, 405, 100);
                 ctx.fillStyle = "rgb(0, 0, 0)";
                 ctx.font = "32px VT323"
-                ctx.fillText("Il te manque " + compteurPotions + " potions", 455, 145);
+                ctx.fillText("Il te manque " + compteurPotions + potionsPluriels, 455, 145);
                 ctx.fillText("Pour débloquer le coffre !", 442, 177);
                 ctx.restore();
 

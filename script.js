@@ -1357,6 +1357,15 @@
             case 6: // Si toutes les potions ont été récupérées, debloque le coffre
               if (potionsRecuperees.potionRougeRecup && potionsRecuperees.potionBleueRecup && potionsRecuperees.potionVerteRecup && potionsRecuperees.potionJauneRecup && potionsRecuperees.potionVioletteRecup){
               objetCoffre.unlock = true;
+
+              ctx.save();
+              ctx.drawImage(bulle.contenu, 405, 100);
+              ctx.fillStyle = "rgb(0, 0, 0)";
+              ctx.font = "32px VT323"
+              ctx.fillText("Félicitations! Saute sur", 442, 145);
+              ctx.fillText("le CV pour le lire !", 474, 177);
+              ctx.restore();
+
               } else {
                 
                 // verif du nombre potions à récupérer pour débloquer le coffre
@@ -1386,6 +1395,7 @@
                   potionsPluriels = " potions"
                 }
 
+                // affichage d'un texte "il vous manque X potions"
                 ctx.save();
                 ctx.drawImage(bulle.contenu, 405, 100);
                 ctx.fillStyle = "rgb(0, 0, 0)";

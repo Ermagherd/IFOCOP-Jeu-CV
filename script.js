@@ -1360,7 +1360,7 @@
 
               ctx.save();
               ctx.drawImage(bulle.contenu, 405, 100);
-              ctx.fillStyle = "rgb(0, 0, 0)";
+              ctx.fillStyle = "rgb(68, 27, 52)";
               ctx.font = "32px VT323"
               ctx.fillText("Félicitations! Saute sur", 442, 145);
               ctx.fillText("le CV pour le lire !", 474, 177);
@@ -1398,7 +1398,7 @@
                 // affichage d'un texte "il vous manque X potions"
                 ctx.save();
                 ctx.drawImage(bulle.contenu, 405, 100);
-                ctx.fillStyle = "rgb(0, 0, 0)";
+                ctx.fillStyle = "rgb(68, 27, 52)";
                 ctx.font = "32px VT323"
                 ctx.fillText("Il te manque " + compteurPotions + potionsPluriels, 455, 145);
                 ctx.fillText("Pour débloquer le coffre !", 442, 177);

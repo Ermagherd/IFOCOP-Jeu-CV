@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 1em;
-	background-image: url("./img/bg.jpg");
+	background-image: url("./img/bg.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: 50%;
@@ -13,11 +13,11 @@ body {
 
 /* ************************************************************* */
 /* ************************************************************* */
-/*                           MIN 320px                          */
+/*                           MIN 320PX                          */
 /* ************************************************************* */
 /* ************************************************************* */
 
-@media (min-width:320px) AND (max-width:480px) {
+@media (min-width:320px) AND (max-width:320px) {
 	 /* smartphones, iPhone, portrait 480x320 phones */
 
 	/* //////////// HEADER //////////// */
@@ -57,11 +57,11 @@ body {
 	}
 
 	#go-tuto {
-		margin: 0px 20px 0px 20px;
+		margin: 0px 20PX 0px 20PX;
 		/* background-color: red; */
 		display: inline-block;
-		width: 150px;
-		height: 150px;
+		width: 150PX;
+		height: 150PX;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-position: -259px -78px; 
 		background-size: 400px;
@@ -108,7 +108,7 @@ body {
 		height: 26px;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-size: 460%;
-		background-position: -97px 0px; 
+		background-position: -97PX 0px; 
 		z-index: 2;   
 	}
 
@@ -127,7 +127,7 @@ body {
 		height: 26px;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-size: 460%;
-		background-position: -193px 0px;
+		background-position: -193PX 0px;
 		z-index: 3;
 	}
 
@@ -160,20 +160,20 @@ body {
 		border-image: url(./img/frame.png) 24 round;
 		opacity: 1;
 		width: 85%;
-		height: 550px;
-		/* display: none; */
+		height: 480px;
+		display: none;
 	}
 
 	/* //////////// LOADER JEU //////////// */  
 
 	#loader {
-		margin: 0px 20px 10px 20px;
+		margin: 0px 20PX 10px 20PX;
 		/* background-color: red; */
 		display: inline-block;
-		width: 150px;
-		height: 150px;
+		width: 150PX;
+		height: 150PX;
 		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -22px -116px;
+		background-position: -22PX -116px;
 		background-size: 600px;
 		overflow: visible;
 		z-index: 4;
@@ -183,36 +183,68 @@ body {
 		background-position: -210px -116px;    
 	}
 
-/* ////////////// CONTACT ////////////// */
+	/* //////////////FORMULAIRE////////////// */
 
-#linkedin {
-	margin: 70px 20px 10px 20px;
+	#formulaire-contact {
+		display: none;
+	}
 
-	display: block;
-	width: 190px;
-	height: 44px;
-	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -1px -379px;
-	z-index: 2;   
-}
+	#bloc-formulaire {
+		margin: 0 0 30px 0;
+		text-align: justify;
+		border: 20px solid transparent;
+		-webkit-border-image: url(./img/frame.png) 24 round;
+		-o-border-image: url(./img/frame.png) 24 round;
+		border-image: url(./img/frame.png) 24 round;
+	}
 
-#linkedin:active{
-	background-position: -1px -424px;   
-}
+	label {
+		vertical-align: -webkit-baseline-middle;
+		color: white;
+	}
 
-#linkedin:hover{
-	cursor: pointer;    
-}
+	form {
+		display: table;
+		margin: 26PX;
+	}
+
+	form div {
+		display: table-row;
+	}
+
+	label, input {
+		display: table-cell;
+		margin-bottom: 20px;
+	}
+
+	label {
+		padding-right:  20px;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	#envoyer {
+		width: 190px;
+		height: 43PX;
+		display: inline-block;
+		background-image: url(./img/spriteSheet_UI.png);
+		background-position: -388PX 0px;
+		z-index: 8;
+
+	}
+
+	#envoyer:active{
+		background-position: -388PX -45px;    
+	}
 
 }
 
 /* ************************************************************* */
 /* ************************************************************* */
-/*                           MIN 481px                          */
+/*                           MIN 481PX                          */
 /* ************************************************************* */
 /* ************************************************************* */
 
-@media (min-width:481px) AND (max-width:640px) {
+@media (min-width:481px)  {
 	/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 
 	/* //////////// HEADER //////////// */
@@ -252,11 +284,11 @@ body {
 	}
 
 	#go-tuto {
-		margin: 0px 20px 0px 20px;
+		margin: 0px 20PX 0px 20PX;
 		/* background-color: red; */
 		display: inline-block;
-		width: 150px;
-		height: 150px;
+		width: 150PX;
+		height: 150PX;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-position: -259px -78px; 
 		background-size: 400px;
@@ -278,10 +310,10 @@ body {
 	}
 
 	#accueil {
-		margin: 0 5px 0 5px;
+		margin: 0 5PX 0 5PX;
 		display: inline-block;
-		width: 128px;
-		height: 36px;
+		width: 128PX;
+		height: 36PX;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-position: 0 0px;
 		z-index: 1;
@@ -296,12 +328,12 @@ body {
 	}
 
 	#cv {
-		margin: 0 5px 0 5px;
+		margin: 0 5PX 0 5PX;
 		display: inline-block;
-		width: 128px;
-		height: 36px;
+		width: 128PX;
+		height: 36PX;
 		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -127px 0px; 
+		background-position: -127PX 0px; 
 		z-index: 2;   
 	}
 
@@ -314,12 +346,12 @@ body {
 	}
 
 	#contact {
-		margin: 0 5px 0 5px;
+		margin: 0 5PX 0 5PX;
 		display: inline-block;
-		width: 128px;
-		height: 36px;
+		width: 128PX;
+		height: 36PX;
 		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -255px 0px;
+		background-position: -255PX 0px;
 		z-index: 3;
 	}
 
@@ -353,19 +385,19 @@ body {
 		opacity: 1;
 		width: 90%;
 		height: 800px;
-		/* display: none; */
+		display: none;
 	}
 
 	/* //////////// LOADER JEU //////////// */  
 
 	#loader {
-		margin: 0px 20px 10px 20px;
+		margin: 0px 20PX 10px 20PX;
 		/* background-color: red; */
 		display: inline-block;
-		width: 150px;
-		height: 150px;
+		width: 150PX;
+		height: 150PX;
 		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -22px -116px;
+		background-position: -22PX -116px;
 		background-size: 600px;
 		overflow: visible;
 		z-index: 4;
@@ -375,36 +407,68 @@ body {
 		background-position: -210px -116px;    
 	}
 
-/* ////////////// CONTACT ////////////// */
+	/* //////////////FORMULAIRE////////////// */
 
-#linkedin {
-	margin: 70px 20px 10px 20px;
+	#formulaire-contact {
+		display: none;
+	}
 
-	display: block;
-	width: 190px;
-	height: 44px;
-	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -1px -379px;
-	z-index: 2;   
-}
+	#bloc-formulaire {
+		margin: 0 0 30px 0;
+		text-align: justify;
+		border: 20px solid transparent;
+		-webkit-border-image: url(./img/frame.png) 24 round;
+		-o-border-image: url(./img/frame.png) 24 round;
+		border-image: url(./img/frame.png) 24 round;
+	}
 
-#linkedin:active{
-	background-position: -1px -424px;   
-}
+	label {
+		vertical-align: -webkit-baseline-middle;
+		color: white;
+	}
 
-#linkedin:hover{
-	cursor: pointer;    
-}
+	form {
+		display: table;
+		margin: 26PX;
+	}
+
+	form div {
+		display: table-row;
+	}
+
+	label, input {
+		display: table-cell;
+		margin-bottom: 20px;
+	}
+
+	label {
+		padding-right:  20px;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	#envoyer {
+		width: 190px;
+		height: 43PX;
+		display: inline-block;
+		background-image: url(./img/spriteSheet_UI.png);
+		background-position: -388PX 0px;
+		z-index: 8;
+
+	}
+
+	#envoyer:active{
+		background-position: -388PX -45px;    
+	}
 
 }
 
 /* ************************************************************* */
 /* ************************************************************* */
-/*                           MIN 641px                          */
+/*                           MIN 641PX                          */
 /* ************************************************************* */
 /* ************************************************************* */
 
-@media (min-width:641px) AND (max-width:960px)  {
+@media (min-width:641px)  {
  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 
 /* //////////// HEADER //////////// */
@@ -444,11 +508,11 @@ body {
 	}
 
 	#go-tuto {
-		margin: 0px 20px 0px 20px;
+		margin: 0px 20PX 0px 20PX;
 		/* background-color: red; */
 		display: inline-block;
-		width: 150px;
-		height: 150px;
+		width: 150PX;
+		height: 150PX;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-position: -259px -78px; 
 		background-size: 400px;
@@ -470,10 +534,10 @@ body {
 	}
 
 	#accueil {
-		margin: 0 20px 10px 20px;
+		margin: 0 20PX 10px 20PX;
 		display: inline-block;
-		width: 128px;
-		height: 36px;
+		width: 128PX;
+		height: 36PX;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-position: 0 0px;
 		z-index: 1;
@@ -488,12 +552,12 @@ body {
 	}
 
 	#cv {
-		margin: 0 20px 10px 20px;
+		margin: 0 20PX 10px 20PX;
 		display: inline-block;
-		width: 128px;
-		height: 36px;
+		width: 128PX;
+		height: 36PX;
 		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -127px 0px; 
+		background-position: -127PX 0px; 
 		z-index: 2;   
 	}
 
@@ -506,12 +570,12 @@ body {
 	}
 
 	#contact {
-		margin: 0 20px 10px 20px;
+		margin: 0 20PX 10px 20PX;
 		display: inline-block;
-		width: 128px;
-		height: 36px;
+		width: 128PX;
+		height: 36PX;
 		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -255px 0px;
+		background-position: -255PX 0px;
 		z-index: 3;
 	}
 
@@ -544,19 +608,19 @@ body {
 		opacity: 1;
 		width: 90%;
 		height: 1200px;
-		/* display: none; */
+		display: none;
 	}
 
 	/* //////////// LOADER JEU //////////// */  
 
 	#loader {
-		margin: 0px 20px 10px 20px;
+		margin: 0px 20PX 10px 20PX;
 		/* background-color: red; */
 		display: inline-block;
-		width: 150px;
-		height: 150px;
+		width: 150PX;
+		height: 150PX;
 		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -22px -116px;
+		background-position: -22PX -116px;
 		background-size: 600px;
 		overflow: visible;
 		z-index: 4;
@@ -566,36 +630,68 @@ body {
 		background-position: -210px -116px;    
 	}
 
-/* ////////////// CONTACT ////////////// */
+	/* //////////////FORMULAIRE////////////// */
 
-#linkedin {
-	margin: 70px 20px 10px 20px;
+	#formulaire-contact {
+		display: none;
+	}
 
-	display: block;
-	width: 190px;
-	height: 44px;
-	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -1px -379px;
-	z-index: 2;   
-}
+	#bloc-formulaire {
+		margin: 0 0 30px 0;
+		text-align: justify;
+		border: 20px solid transparent;
+		-webkit-border-image: url(./img/frame.png) 24 round;
+		-o-border-image: url(./img/frame.png) 24 round;
+		border-image: url(./img/frame.png) 24 round;
+	}
 
-#linkedin:active{
-	background-position: -1px -424px;   
-}
+	label {
+		vertical-align: -webkit-baseline-middle;
+		color: white;
+	}
 
-#linkedin:hover{
-	cursor: pointer;    
-}
+	form {
+		display: table;
+		margin: 26PX;
+	}
+
+	form div {
+		display: table-row;
+	}
+
+	label, input {
+		display: table-cell;
+		margin-bottom: 20px;
+	}
+
+	label {
+		padding-right:  20px;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	#envoyer {
+		width: 190px;
+		height: 43PX;
+		display: inline-block;
+		background-image: url(./img/spriteSheet_UI.png);
+		background-position: -388PX 0px;
+		z-index: 8;
+
+	}
+
+	#envoyer:active{
+		background-position: -388PX -45px;    
+	}
 
 }
 
 /* ************************************************************* */
 /* ************************************************************* */
-/*                           MIN 961px                          */
+/*                           MIN 961PX                          */
 /* ************************************************************* */
 /* ************************************************************* */
 
-@media (min-width:961px) AND (max-width:1024px) {
+@media (min-width:961px)  {
 	 /* tablet, landscape iPad, lo-res laptops ands desktops */
 
 /* //////////// HEADER //////////// */
@@ -635,11 +731,11 @@ body {
 }
 
 #go-tuto {
-	margin: 0px 20px 0px 20px;
+	margin: 0px 20PX 0px 20PX;
 	/* background-color: red; */
 	display: inline-block;
-	width: 150px;
-	height: 150px;
+	width: 150PX;
+	height: 150PX;
 	background-image: url(./img/spriteSheet_UI.png);
 	background-position: -259px -78px; 
 	background-size: 400px;
@@ -661,10 +757,10 @@ li {
 }
 
 #accueil {
-	margin: 0 20px 10px 20px;
+	margin: 0 20PX 10px 20PX;
 	display: inline-block;
-	width: 128px;
-	height: 36px;
+	width: 128PX;
+	height: 36PX;
 	background-image: url(./img/spriteSheet_UI.png);
 	background-position: 0 0px;
 	z-index: 1;
@@ -679,12 +775,12 @@ li {
 }
 
 #cv {
-	margin: 0 20px 10px 20px;
+	margin: 0 20PX 10px 20PX;
 	display: inline-block;
-	width: 128px;
-	height: 36px;
+	width: 128PX;
+	height: 36PX;
 	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -127px 0px; 
+	background-position: -127PX 0px; 
 	z-index: 2;   
 }
 
@@ -697,12 +793,12 @@ li {
 }
 
 #contact {
-	margin: 0 20px 10px 20px;
+	margin: 0 20PX 10px 20PX;
 	display: inline-block;
-	width: 128px;
-	height: 36px;
+	width: 128PX;
+	height: 36PX;
 	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -255px 0px;
+	background-position: -255PX 0px;
 	z-index: 3;
 }
 
@@ -737,19 +833,19 @@ object {
 	opacity: 1;
 	width: 900px;
 	height: 1270px;
-	/* display: none; */
+	display: none;
 }
 
 /* //////////// LOADER JEU //////////// */  
 
 #loader {
-	margin: 0px 20px 10px 20px;
+	margin: 0px 20PX 10px 20PX;
 	/* background-color: red; */
 	display: inline-block;
-	width: 150px;
-	height: 150px;
+	width: 150PX;
+	height: 150PX;
 	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -22px -116px;
+	background-position: -22PX -116px;
 	background-size: 600px;
 	overflow: visible;
 	z-index: 4;
@@ -759,25 +855,57 @@ object {
 	background-position: -210px -116px;    
 }
 
-/* ////////////// CONTACT ////////////// */
+/* //////////////FORMULAIRE////////////// */
 
-#linkedin {
-	margin: 70px 20px 10px 20px;
+#formulaire-contact {
+	display: none;
+}
 
-	display: block;
+#bloc-formulaire {
+	margin: 0 0 30px 0;
+	text-align: justify;
+	border: 20px solid transparent;
+	-webkit-border-image: url(./img/frame.png) 24 round;
+	-o-border-image: url(./img/frame.png) 24 round;
+	border-image: url(./img/frame.png) 24 round;
+}
+
+label {
+	vertical-align: -webkit-baseline-middle;
+	color: white;
+}
+
+form {
+	display: table;
+	margin: 26PX;
+}
+
+form div {
+	display: table-row;
+}
+
+label, input {
+	display: table-cell;
+	margin-bottom: 20px;
+}
+
+label {
+	padding-right:  20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#envoyer {
 	width: 190px;
-	height: 44px;
+	height: 43PX;
+	display: inline-block;
 	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -1px -379px;
-	z-index: 2;   
+	background-position: -388PX 0px;
+	z-index: 8;
+
 }
 
-#linkedin:active{
-	background-position: -1px -424px;   
-}
-
-#linkedin:hover{
-	cursor: pointer;    
+#envoyer:active{
+	background-position: -388PX -45px;    
 }
 
 }
@@ -785,11 +913,11 @@ object {
 
 /* ************************************************************* */
 /* ************************************************************* */
-/*                           MIN 1025px                          */
+/*                           MIN 1025PX                          */
 /* ************************************************************* */
 /* ************************************************************* */
 
-@media (min-width:1025px) AND (max-width:1280px) {
+@media (min-width:1025px) {
 		/* big landscape tablets, laptops, and desktops */ 
 
 /* //////////// HEADER //////////// */
@@ -829,11 +957,11 @@ object {
 }
 
 #go-tuto {
-	margin: 0px 20px 0px 20px;
+	margin: 0px 20PX 0px 20PX;
 	/* background-color: red; */
 	display: inline-block;
-	width: 150px;
-	height: 150px;
+	width: 150PX;
+	height: 150PX;
 	background-image: url(./img/spriteSheet_UI.png);
 	background-position: -259px -78px; 
 	background-size: 400px;
@@ -855,10 +983,10 @@ li {
 }
 
 #accueil {
-	margin: 0 20px 10px 20px;
+	margin: 0 20PX 10px 20PX;
 	display: inline-block;
-	width: 128px;
-	height: 36px;
+	width: 128PX;
+	height: 36PX;
 	background-image: url(./img/spriteSheet_UI.png);
 	background-position: 0 0px;
 	z-index: 1;
@@ -873,12 +1001,12 @@ li {
 }
 
 #cv {
-	margin: 0 20px 10px 20px;
+	margin: 0 20PX 10px 20PX;
 	display: inline-block;
-	width: 128px;
-	height: 36px;
+	width: 128PX;
+	height: 36PX;
 	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -127px 0px; 
+	background-position: -127PX 0px; 
 	z-index: 2;   
 }
 
@@ -891,12 +1019,12 @@ li {
 }
 
 #contact {
-	margin: 0 20px 10px 20px;
+	margin: 0 20PX 10px 20PX;
 	display: inline-block;
-	width: 128px;
-	height: 36px;
+	width: 128PX;
+	height: 36PX;
 	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -255px 0px;
+	background-position: -255PX 0px;
 	z-index: 3;
 }
 
@@ -931,19 +1059,19 @@ object {
 	opacity: 1;
 	width: 900px;
 	height: 1270px;
-	/* display: none; */
+	display: none;
 }
 
 /* //////////// LOADER JEU //////////// */  
 
 #loader {
-	margin: 0px 20px 10px 20px;
+	margin: 0px 20PX 10px 20PX;
 	/* background-color: red; */
 	display: inline-block;
-	width: 150px;
-	height: 150px;
+	width: 150PX;
+	height: 150PX;
 	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -22px -116px;
+	background-position: -22PX -116px;
 	background-size: 600px;
 	overflow: visible;
 	z-index: 4;
@@ -953,33 +1081,64 @@ object {
 	background-position: -210px -116px;    
 }
 
-/* ////////////// CONTACT ////////////// */
+/* //////////////FORMULAIRE////////////// */
 
-#linkedin {
-	margin: 70px 20px 10px 20px;
+#formulaire-contact {
+	display: none;
+}
 
-	display: block;
+#bloc-formulaire {
+	margin: 0 0 30px 0;
+	text-align: justify;
+	border: 20px solid transparent;
+	-webkit-border-image: url(./img/frame.png) 24 round;
+	-o-border-image: url(./img/frame.png) 24 round;
+	border-image: url(./img/frame.png) 24 round;
+}
+
+label {
+	vertical-align: -webkit-baseline-middle;
+	color: white;
+}
+
+form {
+	display: table;
+	margin: 26PX;
+}
+
+form div {
+	display: table-row;
+}
+
+label, input {
+	display: table-cell;
+	margin-bottom: 20px;
+}
+
+label {
+	padding-right:  20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#envoyer {
 	width: 190px;
-	height: 44px;
+	height: 43PX;
+	display: inline-block;
 	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -1px -379px;
-	z-index: 2;   
-}
-
-#linkedin:active{
-	background-position: -1px -424px;   
-}
-
-#linkedin:hover{
-	cursor: pointer;    
-}
+	background-position: -388PX 0px;
+	z-index: 8;
 
 }
 
+#envoyer:active{
+	background-position: -388PX -45px;    
+}
+
+}
 
 /* ************************************************************* */
 /* ************************************************************* */
-/*                           MIN 1281px                          */
+/*                           MIN 1281PX                          */
 /* ************************************************************* */
 /* ************************************************************* */
 
@@ -1023,11 +1182,11 @@ object {
 }
 
 #go-tuto {
-	margin: 0px 20px 0px 20px;
+	margin: 0px 20PX 0px 20PX;
 	/* background-color: red; */
 	display: inline-block;
-	width: 150px;
-	height: 150px;
+	width: 150PX;
+	height: 150PX;
 	background-image: url(./img/spriteSheet_UI.png);
 	background-position: -259px -78px; 
 	background-size: 400px;
@@ -1049,10 +1208,10 @@ li {
 }
 
 #accueil {
-	margin: 0 20px 10px 20px;
+	margin: 0 20PX 10px 20PX;
 	display: inline-block;
-	width: 128px;
-	height: 36px;
+	width: 128PX;
+	height: 36PX;
 	background-image: url(./img/spriteSheet_UI.png);
 	background-position: 0 0px;
 	z-index: 1;
@@ -1067,12 +1226,12 @@ li {
 }
 
 #cv {
-	margin: 0 20px 10px 20px;
+	margin: 0 20PX 10px 20PX;
 	display: inline-block;
-	width: 128px;
-	height: 36px;
+	width: 128PX;
+	height: 36PX;
 	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -127px 0px; 
+	background-position: -127PX 0px; 
 	z-index: 2;   
 }
 
@@ -1085,12 +1244,12 @@ li {
 }
 
 #contact {
-	margin: 0 20px 10px 20px;
+	margin: 0 20PX 10px 20PX;
 	display: inline-block;
-	width: 128px;
-	height: 36px;
+	width: 128PX;
+	height: 36PX;
 	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -255px 0px;
+	background-position: -255PX 0px;
 	z-index: 3;
 }
 
@@ -1125,19 +1284,19 @@ object {
 	opacity: 1;
 	width: 900px;
 	height: 1270px;
-	/* display: none; */
+	display: none;
 }
 
 /* //////////// LOADER JEU //////////// */  
 
 #loader {
-	margin: 0px 20px 10px 20px;
+	margin: 0px 20PX 10px 20PX;
 	/* background-color: red; */
 	display: inline-block;
-	width: 150px;
-	height: 150px;
+	width: 150PX;
+	height: 150PX;
 	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -22px -116px;
+	background-position: -22PX -116px;
 	background-size: 600px;
 	overflow: visible;
 	z-index: 4;
@@ -1150,22 +1309,7 @@ object {
 /* ////////////// CONTACT ////////////// */
 
 #linkedin {
-	margin: 70px 20px 10px 20px;
-
-	display: block;
-	width: 190px;
-	height: 44px;
-	background-image: url(./img/spriteSheet_UI.png);
-	background-position: -1px -379px;
-	z-index: 2;   
-}
-
-#linkedin:active{
-	background-position: -1px -424px;   
-}
-
-#linkedin:hover{
-	cursor: pointer;    
+	
 }
 
 }

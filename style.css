@@ -142,19 +142,19 @@ background-position: -1px -424px;
 	}
 
 	#tutoriel img {
-		width: 700px;
+		width: 280px;
 	}
 
 	#go-tuto {
 		margin: 0px 20px 0px 20px;
-		width: 150px;
-		height: 150px;
-		background-position: -259px -78px;
-		background-size: 400px;
+		width: 100px;
+		height: 100px;
+		background-position: -202px -60px;
+		background-size: 300px;
 	}
 
 	#go-tuto:hover {
-		background-position: -121px -78px;
+		background-position: -99px -60px;
 	}
 
 	/* //////////// NAV //////////// */
@@ -274,7 +274,7 @@ background-position: -1px -424px;
 	}
 
 	#tutoriel img {
-		width: 700px;
+		width: 450px;
 	}
 
 	#go-tuto {
@@ -297,7 +297,6 @@ background-position: -1px -424px;
 		margin: 0 5px 0 5px;
 		width: 128px;
 		height: 36px;
-
 	}
 
 	#cv {
@@ -382,7 +381,7 @@ background-position: -1px -424px;
 	}
 
 	#tutoriel img {
-		width: 700px;
+		width: 550px;
 	}
 
 	#go-tuto {

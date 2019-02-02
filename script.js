@@ -10,7 +10,7 @@
     $("#go-tuto").click(function(e){
       e.preventDefault();
       $("#tutoriel").animate({opacity: "0"});
-      setTimeout(() => {
+      setTimeout(function () {
         $("#tutoriel").css({display: "none"});      
       }, 500);
     });

@@ -15,8 +15,6 @@ function jeuDave () {
     ctx.mozImageSmoothingEnabled = false;
     ctx.webkitImageSmoothingEnabled = false;
 
-    // window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-
     ///////////////////////////////////////////////////////////////
     /////                        CONTROLS                     /////
     ///////////////////////////////////////////////////////////////

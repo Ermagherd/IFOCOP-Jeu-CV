@@ -1,43 +1,5 @@
-(function () {
+function jeuDave () {
   'use strict';
-
-  window.addEventListener('DOMContentLoaded', function () {
-
-    ///////////////////////////////////////////////////////////////
-    /////               GESTION DE LA NAV ONE PAGE            /////
-    ///////////////////////////////////////////////////////////////
-
-    $("#go-tuto").click(function(e){
-      e.preventDefault();
-      $("#tutoriel").animate({opacity: "0"});
-      setTimeout(function () {
-        $("#tutoriel").css({display: "none"});      
-      }, 500);
-    });
-    
-    $("#accueil").click(function(){
-      $("#canvas").css("display", "inline-block");
-      $("object").css("display", "none");
-      $("#formulaire-contact").css("display", "none");
-    });
-    
-    $("#cv").click(function(){
-      $("#canvas").css("display", "none");
-      $("object").css("display", "inline-block");
-      $("#formulaire-contact").css("display", "none");
-    });
-    
-    $("#contact").click(function(){
-      $("#canvas").css("display", "none");
-      $("object").css("display", "none");
-      $("#formulaire-contact").css("display", "inline-block");
-    });
-
-    $("#accueil").click();
-
-    $("#linkedin").click(function(){
-      window.open('https://www.linkedin.com/in/pierre-fouch%C3%A9/', '_blank', 'toolbar=0,location=0,menubar=0');
-    });
 
     ///////////////////////////////////////////////////////////////
     /////               INITIALISATION DU CANVAS              /////
@@ -53,7 +15,7 @@
     ctx.mozImageSmoothingEnabled = false;
     ctx.webkitImageSmoothingEnabled = false;
 
-    window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    // window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
     ///////////////////////////////////////////////////////////////
     /////                        CONTROLS                     /////
@@ -1923,7 +1885,6 @@
           };
           resetAnimation = true;
           dave.degat = false;
-          // dave.sante = [1, 1, 1, 1]; // Santé 100%
           dave.sante.push(1, 1, 1, 1); // Santé 100%
           dave.vivant = true; // Dave est en vie!
         }
@@ -1946,9 +1907,30 @@
     window.addEventListener('keydown', controls.keyUpOrDown);
     window.addEventListener('keyup', controls.keyUpOrDown);
 
+    // SNIPPET COMPATIBILITE REQUESTANIMATIONFRAME
+    if ( !window.requestAnimationFrame ) {
+
+      var lastTime = 0;
+      window.requestAnimationFrame = ( function() {
+        return window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function(callback) {
+          var currTime = new Date().getTime();
+          var timeToCall = Math.max(0, 16 - (currTime - (lastTime - 3)));
+          var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+            timeToCall);
+          lastTime = currTime + timeToCall;
+          return id;
+      };
+    
+      } )();
+    
+    }
+
     // INITIALISATION DE LA BOUCLE D'ANIMATION
     boucle();
 
-  });
 
-}());
+};

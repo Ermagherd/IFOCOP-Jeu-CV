@@ -100,14 +100,20 @@ li {
 /* ////////////// CONTACT ////////////// */
 
 #linkedin {
-display: block;
-background-image: url(./img/spriteSheet_UI.png);
-background-position: -1px -379px;
-z-index: 2;   
+	display: block;
+	background-image: url(./img/spriteSheet_UI.png);
+	background-position: -1px -379px;
+	z-index: 2;   
 }
 
 #linkedin:active{
-background-position: -1px -424px;   
+	background-position: -1px -424px;   
+}
+
+/* ////////////// CONTROLS ////////////// */
+
+#gauche, #droite, #bas, #hit, #haut, #revive{
+	display: none;
 }
 
 /* ************************************************************* */
@@ -221,7 +227,7 @@ background-position: -1px -424px;
 	}
 
 	/* ////////////// CONTACT ////////////// */
-
+	
 	#linkedin {
 		margin: 70px 20px 10px 20px;
 		display: block;
@@ -231,13 +237,69 @@ background-position: -1px -424px;
 		background-position: -1px -379px;
 		z-index: 2;
 	}
-
+	
 	#linkedin:active {
 		background-position: -1px -424px;
 	}
-
+	
 	#linkedin:hover {
 		cursor: pointer;
+	}
+	
+	/* ////////////// CONTACT ////////////// */
+
+	#gauche {
+		display: inline-block;
+		margin: 10px 10px;
+		width: 55px;
+		height: 55px;
+		background-image: url(./img/spriteSheet_UI.png);
+		background-position: -207px -363px;
+	}
+	
+	#droite {
+		display: inline-block;
+		margin: 10px 10px;
+		width: 55px;
+		height: 55px;
+		background-image: url(./img/spriteSheet_UI.png);
+		background-position: -269px -363px;
+	}
+	
+	#hit {
+		display: inline-block;
+		margin: 10px 10px;
+		width: 55px;
+		height: 55px;
+		background-image: url(./img/spriteSheet_UI.png);
+		background-position: -333px -363px;
+	}
+	
+	#haut {
+		display: inline-block;
+		margin: 10px 10px;
+		width: 55px;
+		height: 55px;
+		background-image: url(./img/spriteSheet_UI.png);
+		background-position: -333px -363px;
+	}
+	
+	#bas {
+		display: inline-block;
+		margin: 10px 10px;
+		width: 135px;
+		height: 55px;
+		background-image: url(./img/spriteSheet_UI.png);
+		background-position: -209px -425px;
+	}
+	
+	#revive {
+		display: inline-block;
+		margin: 10px 10px;
+		width: 135px;
+		height: 55px;
+		background-image: url(./img/spriteSheet_UI.png);
+		background-position: -349px -425px;
 	}
 
 }

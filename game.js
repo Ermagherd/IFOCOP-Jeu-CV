@@ -133,6 +133,45 @@ function jeuDave () {
         }
       }
     };
+  
+
+    // CONTROLS MOBILE
+
+    $("#gauche").bind('touchstart', function(){
+      controls.gauche = true;
+    }).bind('touchend', function(){
+      controls.gauche = false;
+    });
+
+    $("#droite").bind('touchstart', function(){
+      controls.droite = true;
+    }).bind('touchend', function(){
+      controls.droite = false;
+    });
+
+    $("#bas").bind('touchstart', function(){
+      controls.bas = true;
+    }).bind('touchend', function(){
+      controls.bas = false;
+    });
+
+    $("#haut").bind('touchstart', function(){
+      controls.haut = true;
+    }).bind('touchend', function(){
+      controls.haut = false;
+    });
+
+    $("#hit").bind('touchstart', function(){
+      controls.hit = true;
+    }).bind('touchend', function(){
+      controls.hit = false;
+    });
+
+    $("#revive").bind('touchstart', function(){
+      controls.revive = true;
+    }).bind('touchend', function(){
+      controls.revive = false;
+    });
 
     ///////////////////////////////////////////////////////////////
     /////                         CAMERA                      /////

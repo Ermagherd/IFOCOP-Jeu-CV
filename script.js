@@ -5,16 +5,20 @@ window.addEventListener('DOMContentLoaded', function () {
   ///////////////////////////////////////////////////////////////
 
   // splash screen tuto du début
-  $("#go-tuto").click(function(e){
+  $("#go-tuto").click(function (e) {
     e.preventDefault();
-    $("#tutoriel").animate({opacity: "0"});
+    $("#tutoriel").animate({
+      opacity: "0"
+    });
     setTimeout(function () {
-      $("#tutoriel").css({display: "none"});      
+      $("#tutoriel").css({
+        display: "none"
+      });
     }, 500);
   });
 
   // affichage des éléments en fonction du menu
-  $("#accueil").click(function(){
+  $("#accueil").click(function () {
     $("#canvas").css("display", "inline-block");
     $("object").css("display", "none");
     $("#formulaire-contact").css("display", "none");
@@ -26,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function () {
     $("#revive").css("display", "inline-block");
   });
 
-  $("#cv").click(function(){
+  $("#cv").click(function () {
     $("#canvas").css("display", "none");
     $("object").css("display", "inline-block");
     $("#formulaire-contact").css("display", "none");
@@ -38,7 +42,7 @@ window.addEventListener('DOMContentLoaded', function () {
     $("#revive").css("display", "none");
   });
 
-  $("#contact").click(function(){
+  $("#contact").click(function () {
     $("#canvas").css("display", "none");
     $("object").css("display", "none");
     $("#formulaire-contact").css("display", "inline-block");
@@ -50,9 +54,14 @@ window.addEventListener('DOMContentLoaded', function () {
     $("#revive").css("display", "none");
   });
 
+  // clic sur accueil pour définir la page d'accueil
   $("#accueil").click();
 
-  $("#linkedin").click(function(){
+  $("#logo").click(function () {
+    $("#accueil").click();
+  });
+
+  $("#linkedin").click(function () {
     window.open('https://www.linkedin.com/in/pierre-fouch%C3%A9/', '_blank', 'toolbar=0,location=0,menubar=0');
   });
 
@@ -61,5 +70,5 @@ window.addEventListener('DOMContentLoaded', function () {
   ///////////////////////////////////////////////////////////////
 
   jeuDave();
-  
+
 });

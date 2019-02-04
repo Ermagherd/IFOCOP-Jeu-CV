@@ -207,7 +207,8 @@ li {
 	#canvas {
 		border: 20px solid transparent;
 		border-radius: 22px;
-		width: 90%;
+		width: 280px;
+		height: 149px;
 		-webkit-border-image: url(./img/frame.png) 24 round;
 		-o-border-image: url(./img/frame.png) 24 round;
 		border-image: url(./img/frame.png) 24 round;

@@ -226,7 +226,7 @@ li {
 
 	/* //////////// VIEWER PDF //////////// */
 
-	embed {
+	object {
 		border: 20px solid transparent;
 		-webkit-border-image: url(./img/frame.png) 18 round;
 		-o-border-image: url(./img/frame.png) 18 round;
@@ -401,7 +401,7 @@ li {
 
 	/* //////////// VIEWER PDF //////////// */
 
-	embed {
+	object {
 		border: 20px solid transparent;
 		-webkit-border-image: url(./img/frame.png) 18 round;
 		-o-border-image: url(./img/frame.png) 18 round;
@@ -503,7 +503,7 @@ li {
 
 	/* //////////// VIEWER PDF //////////// */
 
-	embed {
+	object {
 		border: 20px solid transparent;
 		-webkit-border-image: url(./img/frame.png) 18 round;
 		-o-border-image: url(./img/frame.png) 18 round;
@@ -605,7 +605,7 @@ li {
 
 	/* //////////// VIEWER PDF //////////// */
 
-	embed {
+	object {
 		border: 20px solid transparent;
 		-webkit-border-image: url(./img/frame.png) 18 round;
 		-o-border-image: url(./img/frame.png) 18 round;
@@ -707,7 +707,7 @@ li {
 
 	/* //////////// VIEWER PDF //////////// */
 
-	embed {
+	object {
 		border: 20px solid transparent;
 		-webkit-border-image: url(./img/frame.png) 18 round;
 		-o-border-image: url(./img/frame.png) 18 round;
@@ -810,7 +810,7 @@ li {
 
 	/* //////////// VIEWER PDF //////////// */
 
-	embed {
+	object {
 		border: 20px solid transparent;
 		-webkit-border-image: url(./img/frame.png) 18 round;
 		-o-border-image: url(./img/frame.png) 18 round;
@@ -877,7 +877,7 @@ li {
 
 	/* //////////// VIEWER PDF //////////// */
 
-	embed {
+	object {
 		display: none;
 	}
 

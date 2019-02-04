@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', function () {
   // affichage des éléments en fonction du menu
   $("#accueil").click(function () {
     $("#canvas").css("display", "inline-block");
-    $("embed").css("display", "none");
+    $("object").css("display", "none");
     $("#formulaire-contact").css("display", "none");
     $("#gauche").css("display", "inline-block");
     $("#droite").css("display", "inline-block");
@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   $("#cv").click(function () {
     $("#canvas").css("display", "none");
-    $("embed").css("display", "inline-block");
+    $("object").css("display", "inline-block");
     $("#formulaire-contact").css("display", "none");
     $("#gauche").css("display", "none");
     $("#droite").css("display", "none");
@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   $("#contact").click(function () {
     $("#canvas").css("display", "none");
-    $("embed").css("display", "none");
+    $("object").css("display", "none");
     $("#formulaire-contact").css("display", "inline-block");
     $("#gauche").css("display", "none");
     $("#droite").css("display", "none");

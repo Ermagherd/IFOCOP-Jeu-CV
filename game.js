@@ -1314,10 +1314,10 @@ function jeuDave () {
   
       ctx.drawImage(hud.contenu, potions[indexPotions][0], potions[indexPotions][1], potions[indexPotions][2], potions[indexPotions][3], xPremierePotion + (decalagePotion * multiplicateurDecalage), y, w, h);
   
-      ctx.fillStyle = "rgb(0, 0, 0)";
-      ctx.fillText(texte, texteX + 1, texteY + 1);
-      ctx.fillStyle = couleurTexte;
-      ctx.fillText(texte, texteX, texteY);
+      // ctx.fillStyle = "rgb(0, 0, 0)";
+      // ctx.fillText(texte, texteX + 1, texteY + 1);
+      // ctx.fillStyle = couleurTexte;
+      // ctx.fillText(texte, texteX, texteY);
       ctx.restore();
   
     }

@@ -948,7 +948,7 @@ li {
 		width: 55px;
 		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -247px -425px
+		background-position: -394px -364px;
 	}
 
 	#revive {
@@ -960,7 +960,7 @@ li {
 		width: 55px;
 		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -390px -425px;
+		background-position: -456px -363px;
 	}
 
 

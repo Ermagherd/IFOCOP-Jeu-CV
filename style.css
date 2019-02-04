@@ -865,12 +865,10 @@ li {
 	#canvas {
 		border: 20px solid transparent;
 		position: fixed;
-		top: 0;
+		top: -20px;
 		margin: 0;
 		padding: 0;
-		/* border-radius: 22px; */
-		width: 70%;
-		/* height: 100%; */
+		width: 90vw;
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -891,11 +889,11 @@ li {
 
 	#gauche {
 		position: fixed;
-		bottom: 10px;
+		bottom: 0;
 		left: 30px;
 		background-color: red;
 		display: inline-block;
-		margin: 10px 10px;
+		margin: 0 10px;
 		width: 55px;
 		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
@@ -904,10 +902,10 @@ li {
 
 	#droite {
 		position: fixed;
-		bottom: 10px;
+		bottom: 0;
 		left: 120px;
 		display: inline-block;
-		margin: 10px 10px;
+		margin: 0 10px;
 		width: 55px;
 		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
@@ -916,10 +914,10 @@ li {
 
 	#hit {
 		position: fixed;
-		bottom: 10px;
+		bottom: 0;
 		right: 120px;
 		display: inline-block;
-		margin: 10px 10px;
+		margin: 0 10px;
 		width: 55px;
 		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
@@ -928,10 +926,10 @@ li {
 
 	#haut {
 		position: fixed;
-		bottom: 10px;
+		bottom: 0;
 		right: 30px;
 		display: inline-block;
-		margin: 10px 10px;
+		margin: 0 10px;
 		width: 55px;
 		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
@@ -939,12 +937,11 @@ li {
 	}
 
 	#bas {
-		border: 10px;
 		position: fixed;
-		bottom: 10px;
+		bottom: 0;
 		left: 210px;
 		display: inline-block;
-		margin: 10px 10px;
+		margin: 0 10px;
 		width: 55px;
 		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
@@ -953,10 +950,10 @@ li {
 
 	#revive {
 		position: fixed;
-		bottom: 10px;
+		bottom: 0;
 		right: 210px;
 		display: inline-block;
-		margin: 10px 10px;
+		margin: 0 10px;
 		width: 55px;
 		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);

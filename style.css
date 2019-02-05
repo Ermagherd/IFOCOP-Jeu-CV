@@ -1,13 +1,13 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-size: 1em;
 	background-image: url("./img/bg.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: 50%;
-	text-align: center;
 	font-family: 'VT323', monospace;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	text-align: center;
 }
 
 /* ************************************************************* */
@@ -19,32 +19,47 @@ body {
 /* //////////// HEADER //////////// */
 
 #header {
-	text-align: center;
-	position: relative;
 	overflow: hidden;
+	position: relative;
+	text-align: center;
 }
 
 #logo {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
 	cursor: pointer;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
 }
 
 /* //////////// SPLASH SCREEN TUTORIEL //////////// */
 
 #tutoriel {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
 	background-color: rgba(0, 0, 0, 0.95);
+	border: 20px solid transparent;
+	-webkit-border-image: url(./img/frame.png) 24 round;
+	-o-border-image: url(./img/frame.png) 24 round;
+	-ms-border-image: url(./img/frame.png) 24 round;
+	-moz-border-image: url(./img/frame.png) 24 round;
+	border-image: url(./img/frame.png) 24 round;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	top: 35px;
 }
 
 #go-tuto {
-	display: inline-block;
 	background-image: url(./img/spriteSheet_UI.png);
+	display: inline-block;
 	overflow: visible;
-	z-index: 0;
+	z-index: 1;
 }
 
 #go-tuto:hover {
@@ -62,10 +77,9 @@ li {
 }
 
 #accueil {
-	display: inline-block;
 	background-image: url(./img/spriteSheet_UI.png);
 	background-position: 0 0px;
-	z-index: 1;
+	display: inline-block;
 }
 
 #accueil:active {
@@ -80,10 +94,9 @@ li {
 }
 
 #cv {
-	display: inline-block;
 	background-image: url(./img/spriteSheet_UI.png);
 	background-position: -127px 0px;
-	z-index: 2;
+	display: inline-block;
 }
 
 #cv:active {
@@ -91,10 +104,9 @@ li {
 }
 
 #contact {
-	display: inline-block;
 	background-image: url(./img/spriteSheet_UI.png);
 	background-position: -255px 0px;
-	z-index: 3;
+	display: inline-block;
 }
 
 #contact:active {
@@ -103,11 +115,38 @@ li {
 
 /* ////////////// CONTACT ////////////// */
 
+#canvas {
+	border: 20px solid transparent;
+	border-image: url(./img/frame.png) 24 round;
+	-webkit-border-image: url(./img/frame.png) 24 round;
+	-o-border-image: url(./img/frame.png) 24 round;
+	-ms-border-image: url(./img/frame.png) 24 round;
+	-moz-border-image: url(./img/frame.png) 24 round;
+	border-radius: 22px;
+	-webkit-border-radius: 22px;
+	-moz-border-radius: 22px;
+	-ms-border-radius: 22px;
+	-o-border-radius: 22px;
+}
+
+/* //////////// VIEWER PDF //////////// */
+
+object {
+	border: 20px solid transparent;
+	border-image: url(./img/frame.png) 24 round;
+	-webkit-border-image: url(./img/frame.png) 24 round;
+	-o-border-image: url(./img/frame.png) 24 round;
+	-ms-border-image: url(./img/frame.png) 24 round;
+	-moz-border-image: url(./img/frame.png) 24 round;
+	opacity: 1;
+}
+
+/* ////////////// CONTACT ////////////// */
+
 #linkedin {
-	display: block;
 	background-image: url(./img/spriteSheet_UI.png);
 	background-position: -1px -379px;
-	z-index: 2;
+	display: block;
 }
 
 #linkedin:active {
@@ -132,7 +171,6 @@ li {
 /* ************************************************************* */
 
 @media (min-width:320px) AND (max-width:480px) {
-	/* smartphones, iPhone, portrait 480x320 phones */
 
 	/* //////////// HEADER //////////// */
 
@@ -142,30 +180,22 @@ li {
 	}
 
 	#logo {
-		width: 150px;
 		top: -15px;
+		width: 150px;
 	}
 
 	/* //////////// SPLASH SCREEN TUTORIEL //////////// */
-
-	#tutoriel {
-		top: 35px;
-		border: 20px solid transparent;
-		-webkit-border-image: url(./img/frame.png) 24 round;
-		-o-border-image: url(./img/frame.png) 24 round;
-		border-image: url(./img/frame.png) 24 round;
-	}
 
 	#tutoriel img {
 		width: 280px;
 	}
 
 	#go-tuto {
-		margin: 0px 20px 0px 20px;
-		width: 100px;
-		height: 100px;
 		background-position: -202px -60px;
 		background-size: 300px;
+		height: 100px;
+		margin: 0px 20px 0px 20px;
+		width: 100px;
 	}
 
 	#go-tuto:hover {
@@ -175,12 +205,11 @@ li {
 	/* //////////// NAV //////////// */
 
 	#accueil {
-		margin: 0 1px 0 1px;
-		width: 96px;
-		height: 26px;
 		background-size: 460%;
 		background-position: 0 0;
-		z-index: 1;
+		height: 26px;
+		margin: 0 1px 0 1px;
+		width: 96px;
 	}
 
 	#accueil:active {
@@ -188,11 +217,11 @@ li {
 	}
 
 	#cv {
-		margin: 0 1px 0 1px;
-		width: 96px;
-		height: 26px;
 		background-size: 460%;
 		background-position: -95px 0px;
+		height: 26px;
+		margin: 0 1px 0 1px;
+		width: 96px;
 	}
 
 	#cv:active {
@@ -200,11 +229,11 @@ li {
 	}
 
 	#contact {
-		margin: 0 1px 0 1px;
-		width: 96px;
-		height: 26px;
 		background-size: 460%;
 		background-position: -192px 0px;
+		height: 26px;
+		margin: 0 1px 0 1px;
+		width: 96px;
 	}
 
 	#contact:active {
@@ -214,38 +243,26 @@ li {
 	/* //////////// CANVAS //////////// */
 
 	#canvas {
-		border: 20px solid transparent;
-		border-radius: 22px;
-		width: 280px;
 		height: 149px;
-		-webkit-border-image: url(./img/frame.png) 24 round;
-		-o-border-image: url(./img/frame.png) 24 round;
-		border-image: url(./img/frame.png) 24 round;
-
+		width: 280px;
 	}
 
 	/* //////////// VIEWER PDF //////////// */
 
 	object {
-		border: 20px solid transparent;
-		-webkit-border-image: url(./img/frame.png) 18 round;
-		-o-border-image: url(./img/frame.png) 18 round;
-		border-image: url(./img/frame.png) 24 round;
-		opacity: 1;
-		width: 85%;
 		height: 550px;
+		width: 85%;
 	}
 
 	/* ////////////// CONTACT ////////////// */
 
 	#linkedin {
-		margin: 70px 20px 10px 20px;
-		display: block;
-		width: 190px;
-		height: 44px;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-position: -1px -379px;
-		z-index: 2;
+		display: block;
+		height: 44px;
+		margin: 70px 20px 10px 20px;
+		width: 190px;
 	}
 
 	#linkedin:active {
@@ -259,57 +276,57 @@ li {
 	/* ////////////// CONTACT ////////////// */
 
 	#gauche {
-		display: inline-block;
-		margin: 10px 10px;
-		width: 55px;
-		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-position: -207px -363px;
+		display: inline-block;
+		height: 55px;
+		margin: 10px 10px;
+		width: 55px;
 	}
 
 	#droite {
-		display: inline-block;
-		margin: 10px 10px;
-		width: 55px;
-		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-position: -269px -363px;
+		display: inline-block;
+		height: 55px;
+		margin: 10px 10px;
+		width: 55px;
 	}
 
 	#hit {
-		display: inline-block;
-		margin: 10px 10px;
-		width: 55px;
-		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-position: -333px -363px;
+		display: inline-block;
+		height: 55px;
+		margin: 10px 10px;
+		width: 55px;
 	}
 
 	#haut {
-		display: inline-block;
-		margin: 10px 10px;
-		width: 55px;
-		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-position: -333px -363px;
+		display: inline-block;
+		height: 55px;
+		margin: 10px 10px;
+		width: 55px;
 	}
 
 	#bas {
-		display: inline-block;
-		margin: 10px 10px;
-		width: 135px;
-		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-position: -209px -425px;
+		display: inline-block;
+		height: 55px;
+		margin: 10px 10px;
+		width: 135px;
 	}
 
 	#revive {
-		display: inline-block;
-		margin: 10px 10px;
-		width: 135px;
-		height: 55px;
 		background-image: url(./img/spriteSheet_UI.png);
 		background-position: -349px -425px;
+		display: inline-block;
+		height: 55px;
+		margin: 10px 10px;
+		width: 135px;
 	}
 
 }
@@ -321,7 +338,6 @@ li {
 /* ************************************************************* */
 
 @media (min-width:481px) AND (max-width:640px) {
-	/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 
 	/* //////////// HEADER //////////// */
 
@@ -331,30 +347,22 @@ li {
 	}
 
 	#logo {
-		width: 150px;
 		top: -15px;
+		width: 150px;
 	}
 
 	/* //////////// SPLASH SCREEN TUTORIEL //////////// */
-
-	#tutoriel {
-		top: 35px;
-		border: 20px solid transparent;
-		-webkit-border-image: url(./img/frame.png) 24 round;
-		-o-border-image: url(./img/frame.png) 24 round;
-		border-image: url(./img/frame.png) 24 round;
-	}
 
 	#tutoriel img {
 		width: 450px;
 	}
 
 	#go-tuto {
-		margin: 0px 20px 0px 20px;
-		width: 150px;
-		height: 150px;
 		background-position: -259px -78px;
 		background-size: 400px;
+		height: 150px;
+		margin: 0px 20px 0px 20px;
+		width: 150px;
 	}
 
 
@@ -366,21 +374,21 @@ li {
 	/* //////////// NAV //////////// */
 
 	#accueil {
+		height: 36px;
 		margin: 0 5px 0 5px;
 		width: 128px;
-		height: 36px;
 	}
 
 	#cv {
+		height: 36px;
 		margin: 0 5px 0 5px;
 		width: 128px;
-		height: 36px;
 	}
 
 	#contact {
+		height: 36px;
 		margin: 0 5px 0 5px;
 		width: 128px;
-		height: 36px;
 	}
 
 	#contact:active {
@@ -390,33 +398,22 @@ li {
 	/* //////////// CANVAS //////////// */
 
 	#canvas {
-		border: 20px solid transparent;
-		border-radius: 22px;
 		width: 90%;
-		-webkit-border-image: url(./img/frame.png) 24 round;
-		-o-border-image: url(./img/frame.png) 24 round;
-		border-image: url(./img/frame.png) 24 round;
-
 	}
 
 	/* //////////// VIEWER PDF //////////// */
 
 	object {
-		border: 20px solid transparent;
-		-webkit-border-image: url(./img/frame.png) 18 round;
-		-o-border-image: url(./img/frame.png) 18 round;
-		border-image: url(./img/frame.png) 24 round;
-		opacity: 1;
-		width: 90%;
 		height: 800px;
+		width: 90%;
 	}
 
 	/* ////////////// CONTACT ////////////// */
 
 	#linkedin {
+		height: 44px;
 		margin: 70px 20px 10px 20px;
 		width: 190px;
-		height: 44px;
 	}
 
 }
@@ -428,7 +425,6 @@ li {
 /* ************************************************************* */
 
 @media (min-width:641px) AND (max-width:960px) {
-	/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 
 	/* //////////// HEADER //////////// */
 
@@ -438,32 +434,23 @@ li {
 	}
 
 	#logo {
-		width: 310px;
 		top: -50px;
+		width: 310px;
 	}
 
 	/* //////////// SPLASH SCREEN TUTORIEL //////////// */
-
-	#tutoriel {
-		top: 35px;
-		border: 20px solid transparent;
-		-webkit-border-image: url(./img/frame.png) 24 round;
-		-o-border-image: url(./img/frame.png) 24 round;
-		border-image: url(./img/frame.png) 24 round;
-	}
 
 	#tutoriel img {
 		width: 550px;
 	}
 
 	#go-tuto {
-		margin: 0px 20px 0px 20px;
-		width: 150px;
-		height: 150px;
 		background-position: -259px -78px;
 		background-size: 400px;
+		height: 150px;
+		margin: 0px 20px 0px 20px;
 		overflow: visible;
-		z-index: 0;
+		width: 150px;
 	}
 
 	#go-tuto:hover {
@@ -473,52 +460,42 @@ li {
 	/* //////////// NAV //////////// */
 
 	#accueil {
+		height: 36px;
 		margin: 0 20px 10px 20px;
 		width: 128px;
-		height: 36px;
 	}
 
 	#cv {
+		height: 36px;
 		margin: 0 20px 10px 20px;
 		width: 128px;
-		height: 36px;
 	}
 
 	#contact {
+		height: 36px;
 		margin: 0 20px 10px 20px;
 		width: 128px;
-		height: 36px;
 	}
 
 	/* //////////// CANVAS //////////// */
 
 	#canvas {
-		border: 20px solid transparent;
-		border-radius: 22px;
 		width: 90%;
-		-webkit-border-image: url(./img/frame.png) 24 round;
-		-o-border-image: url(./img/frame.png) 24 round;
-		border-image: url(./img/frame.png) 24 round;
 	}
 
 	/* //////////// VIEWER PDF //////////// */
 
 	object {
-		border: 20px solid transparent;
-		-webkit-border-image: url(./img/frame.png) 18 round;
-		-o-border-image: url(./img/frame.png) 18 round;
-		border-image: url(./img/frame.png) 24 round;
-		opacity: 1;
-		width: 90%;
 		height: 1200px;
+		width: 90%;
 	}
 
 	/* ////////////// CONTACT ////////////// */
 
 	#linkedin {
+		height: 44px;
 		margin: 70px 20px 10px 20px;
 		width: 190px;
-		height: 44px;
 	}
 
 }
@@ -530,7 +507,6 @@ li {
 /* ************************************************************* */
 
 @media (min-width:961px) AND (max-width:1024px) {
-	/* tablet, landscape iPad, lo-res laptops ands desktops */
 
 	/* //////////// HEADER //////////// */
 
@@ -540,30 +516,22 @@ li {
 	}
 
 	#logo {
-		width: 310px;
 		top: -50px;
+		width: 310px;
 	}
 
 	/* //////////// SPLASH SCREEN TUTORIEL //////////// */
-
-	#tutoriel {
-		top: 35px;
-		border: 20px solid transparent;
-		-webkit-border-image: url(./img/frame.png) 24 round;
-		-o-border-image: url(./img/frame.png) 24 round;
-		border-image: url(./img/frame.png) 24 round;
-	}
 
 	#tutoriel img {
 		width: 700px;
 	}
 
 	#go-tuto {
-		margin: 0px 20px 0px 20px;
-		width: 150px;
-		height: 150px;
 		background-position: -259px -78px;
 		background-size: 400px;
+		height: 150px;
+		margin: 0px 20px 0px 20px;
+		width: 150px;
 	}
 
 	#go-tuto:hover {
@@ -573,54 +541,43 @@ li {
 	/* //////////// NAV //////////// */
 
 	#accueil {
+		height: 36px;
 		margin: 0 20px 10px 20px;
 		width: 128px;
-		height: 36px;
 	}
 
 	#cv {
+		height: 36px;
 		margin: 0 20px 10px 20px;
 		width: 128px;
-		height: 36px;
 	}
 
 	#contact {
+		height: 36px;
 		margin: 0 20px 10px 20px;
 		width: 128px;
-		height: 36px;
 	}
 
 	/* //////////// CANVAS //////////// */
 
 	#canvas {
-		border: 20px solid transparent;
-		border-radius: 22px;
-		width: 100%;
-		-webkit-border-image: url(./img/frame.png) 24 round;
-		-o-border-image: url(./img/frame.png) 24 round;
-		border-image: url(./img/frame.png) 24 round;
-		width: 900px;
 		height: 480px;
+		width: 900px;
 	}
 
 	/* //////////// VIEWER PDF //////////// */
 
 	object {
-		border: 20px solid transparent;
-		-webkit-border-image: url(./img/frame.png) 18 round;
-		-o-border-image: url(./img/frame.png) 18 round;
-		border-image: url(./img/frame.png) 24 round;
-		opacity: 1;
-		width: 900px;
 		height: 1270px;
+		width: 900px;
 	}
 
 	/* ////////////// CONTACT ////////////// */
 
 	#linkedin {
+		height: 44px;
 		margin: 70px 20px 10px 20px;
 		width: 190px;
-		height: 44px;
 	}
 
 }
@@ -632,7 +589,6 @@ li {
 /* ************************************************************* */
 
 @media (min-width:1025px) AND (max-width:1280px) {
-	/* big landscape tablets, laptops, and desktops */
 
 	/* //////////// HEADER //////////// */
 
@@ -642,30 +598,22 @@ li {
 	}
 
 	#logo {
-		width: 310px;
 		top: -50px;
+		width: 310px;
 	}
 
 	/* //////////// SPLASH SCREEN TUTORIEL //////////// */
-
-	#tutoriel {
-		top: 35px;
-		border: 20px solid transparent;
-		-webkit-border-image: url(./img/frame.png) 24 round;
-		-o-border-image: url(./img/frame.png) 24 round;
-		border-image: url(./img/frame.png) 24 round;
-	}
 
 	#tutoriel img {
 		width: 700px;
 	}
 
 	#go-tuto {
-		margin: 0px 20px 0px 20px;
-		width: 150px;
-		height: 150px;
 		background-position: -259px -78px;
 		background-size: 400px;
+		height: 150px;
+		margin: 0px 20px 0px 20px;
+		width: 150px;
 	}
 
 	#go-tuto:hover {
@@ -675,54 +623,43 @@ li {
 	/* //////////// NAV //////////// */
 
 	#accueil {
+		height: 36px;
 		margin: 0 20px 10px 20px;
 		width: 128px;
-		height: 36px;
 	}
 
 	#cv {
+		height: 36px;
 		margin: 0 20px 10px 20px;
 		width: 128px;
-		height: 36px;
 	}
 
 	#contact {
+		height: 36px;
 		margin: 0 20px 10px 20px;
 		width: 128px;
-		height: 36px;
 	}
 
 	/* //////////// CANVAS //////////// */
 
 	#canvas {
-		border: 20px solid transparent;
-		border-radius: 22px;
-		width: 100%;
-		-webkit-border-image: url(./img/frame.png) 24 round;
-		-o-border-image: url(./img/frame.png) 24 round;
-		border-image: url(./img/frame.png) 24 round;
-		width: 900px;
 		height: 480px;
+		width: 900px;
 	}
 
 	/* //////////// VIEWER PDF //////////// */
 
 	object {
-		border: 20px solid transparent;
-		-webkit-border-image: url(./img/frame.png) 18 round;
-		-o-border-image: url(./img/frame.png) 18 round;
-		border-image: url(./img/frame.png) 24 round;
-		opacity: 1;
-		width: 900px;
 		height: 1270px;
+		width: 900px;
 	}
 
 	/* ////////////// CONTACT ////////////// */
 
 	#linkedin {
+		height: 44px;
 		margin: 70px 20px 10px 20px;
 		width: 190px;
-		height: 44px;
 	}
 
 }
@@ -734,7 +671,6 @@ li {
 /* ************************************************************* */
 
 @media (min-width:1281px) {
-	/* hi-res laptops and desktops */
 
 	/* //////////// HEADER //////////// */
 
@@ -744,31 +680,22 @@ li {
 	}
 
 	#logo {
-		width: 310px;
 		top: -50px;
+		width: 310px;
 	}
 
 	/* //////////// SPLASH SCREEN TUTORIEL //////////// */
-
-	#tutoriel {
-		top: 35px;
-		border: 20px solid transparent;
-		-webkit-border-image: url(./img/frame.png) 24 round;
-		-o-border-image: url(./img/frame.png) 24 round;
-		border-image: url(./img/frame.png) 24 round;
-	}
 
 	#tutoriel img {
 		width: 700px;
 	}
 
 	#go-tuto {
-		margin: 0px 20px 0px 20px;
-		width: 150px;
-		height: 150px;
 		background-position: -259px -78px;
 		background-size: 400px;
-		;
+		height: 150px;
+		margin: 0px 20px 0px 20px;
+		width: 150px;
 	}
 
 	#go-tuto:hover {
@@ -778,187 +705,43 @@ li {
 	/* //////////// NAV //////////// */
 
 	#accueil {
+		height: 36px;
 		margin: 0 20px 10px 20px;
 		width: 128px;
-		height: 36px;
 	}
 
 	#cv {
+		height: 36px;
 		margin: 0 20px 10px 20px;
 		width: 128px;
-		height: 36px;
 	}
 
 	#contact {
+		height: 36px;
 		margin: 0 20px 10px 20px;
 		width: 128px;
-		height: 36px;
 	}
 
 	/* //////////// CANVAS //////////// */
 
 	#canvas {
-		border: 20px solid transparent;
-		border-radius: 22px;
-		width: 100%;
-		-webkit-border-image: url(./img/frame.png) 24 round;
-		-o-border-image: url(./img/frame.png) 24 round;
-		border-image: url(./img/frame.png) 24 round;
-		width: 900px;
 		height: 480px;
+		width: 900px;
 	}
 
 	/* //////////// VIEWER PDF //////////// */
 
 	object {
-		border: 20px solid transparent;
-		-webkit-border-image: url(./img/frame.png) 18 round;
-		-o-border-image: url(./img/frame.png) 18 round;
-		border-image: url(./img/frame.png) 24 round;
-		opacity: 1;
-		width: 900px;
 		height: 1270px;
+		width: 900px;
 	}
 
 	/* ////////////// CONTACT ////////////// */
 
 	#linkedin {
+		height: 44px;
 		margin: 70px 20px 10px 20px;
 		width: 190px;
-		height: 44px;
 	}
-
-}
-
-/* ************************************************************* */
-/* ************************************************************* */
-/*                       MOBILE / LANDSCAPE                      */
-/* ************************************************************* */
-/* ************************************************************* */
-
-@media screen and (min-width:320px) and (max-width:823px) and (orientation:landscape) {
-
-	#header {
-		display: none;
-	}
-
-	#tutoriel {
-		display: none;
-	}
-
-	/* //////////// NAV //////////// */
-
-	#accueil {
-		display: none;
-	}
-
-	#cv {
-		display: none;
-	}
-
-	#contact {
-		display: none;
-	}
-
-	/* //////////// CANVAS //////////// */
-
-	#canvas {
-		border: 20px solid transparent;
-		position: fixed;
-		top: -20px;
-		margin: 0;
-		padding: 0;
-		width: 90vw;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	/* //////////// VIEWER PDF //////////// */
-
-	object {
-		display: none;
-	}
-
-	/* ////////////// CONTACT ////////////// */
-
-	#linkedin {
-		display: none;
-	}
-
-	/* ////////////// CONTACT ////////////// */
-
-	#gauche {
-		position: fixed;
-		bottom: 0;
-		left: 30px;
-		background-color: red;
-		display: inline-block;
-		margin: 0 10px;
-		width: 55px;
-		height: 55px;
-		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -207px -363px;
-	}
-
-	#droite {
-		position: fixed;
-		bottom: 0;
-		left: 120px;
-		display: inline-block;
-		margin: 0 10px;
-		width: 55px;
-		height: 55px;
-		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -269px -363px;
-	}
-
-	#hit {
-		position: fixed;
-		bottom: 0;
-		right: 120px;
-		display: inline-block;
-		margin: 0 10px;
-		width: 55px;
-		height: 55px;
-		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -333px -363px;
-	}
-
-	#haut {
-		position: fixed;
-		bottom: 0;
-		right: 30px;
-		display: inline-block;
-		margin: 0 10px;
-		width: 55px;
-		height: 55px;
-		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -333px -363px;
-	}
-
-	#bas {
-		position: fixed;
-		bottom: 0;
-		left: 210px;
-		display: inline-block;
-		margin: 0 10px;
-		width: 55px;
-		height: 55px;
-		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -394px -364px;
-	}
-
-	#revive {
-		position: fixed;
-		bottom: 0;
-		right: 210px;
-		display: inline-block;
-		margin: 0 10px;
-		width: 55px;
-		height: 55px;
-		background-image: url(./img/spriteSheet_UI.png);
-		background-position: -456px -363px;
-	}
-
 
 }

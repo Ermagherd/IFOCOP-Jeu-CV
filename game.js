@@ -1,6 +1,6 @@
 function jeuDave () {
   'use strict';
-
+  
     ///////////////////////////////////////////////////////////////
     /////               INITIALISATION DU CANVAS              /////
     ///////////////////////////////////////////////////////////////
@@ -187,7 +187,7 @@ function jeuDave () {
     camera.update_x = function (valeurX) {
       return this.x = valeurX;
     }; // Mise a jour de la position x de la caméra
-    // Les éléments fixes se servent du x camera pour modifier leurs positions
+    // Les éléments fixes se servent de camera.x pour modifier leurs positions
 
     ///////////////////////////////////////////////////////////////
     /////                        DECOR                        /////
@@ -419,7 +419,7 @@ function jeuDave () {
     tileSet.src = "img/tileSet.png";
 
     ////////////////////////////
-    // declarations des terrains
+    // declarations des terrains. Pour chaque :
     // 1 var terrain map pour le tableau contenant la tile map
     // 1 var contenant l'exécution de la fonction usine (cols, rows, tsize, tiles)
 
@@ -537,6 +537,7 @@ function jeuDave () {
     ///////////////////////////////////////////////////////////////
 
     // GRILLE LOGIQUE
+    // même déclaration que pour les tilemaps visibles
 
     var terrainCollisionsMap = [
       13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 32, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 22, 22, 22, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 22, 22, 22, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 0, 0, 0, 22, 22, 22, 22, 22, 22, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 22, 22, 22, 0, 0, 0, 22, 22, 22, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 22, 22, 22, 22, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 22, 22, 22, 0, 0, 0, 0, 0, 0, 0, 22, 22, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 22, 22, 0, 0, 0, 0, 0, 0, 0, 0, 32, 22, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 22, 22, 22, 22, 22, 22, 22, 22, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 22, 22, 0, 0, 22, 22, 22, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 22, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 32, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 1, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 32, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 22, 22, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 32, 32, 32, 32, 32, 32, 2, 2, 2, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 3, 0, 0, 0, 0, 0, 11, 0, 0, 0, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 13, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 13, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 32, 32, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 3, 0, 0, 0, 0, 11, 0, 0, 0, 2, 3, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 0, 0, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
@@ -879,7 +880,7 @@ function jeuDave () {
       ]
     };
 
-    // FONCTION ANIMATION TOUS SPRITES DAVE
+    // FONCTION ANIMATION POUR TOUS LES MOUVEMENTS DE DAVE
 
     var timestampTemoin;
     var resetAnimation = true;
@@ -915,8 +916,8 @@ function jeuDave () {
         ctx.globalAlpha = 0;
       };
 
-      ctx.drawImage(nomSprite.contenu, nomInterpolation[mouvementInterpolation][indexSprite][0], nomInterpolation[mouvementInterpolation][indexSprite][1], nomInterpolation[mouvementInterpolation][indexSprite][2], nomInterpolation[mouvementInterpolation][indexSprite][3], nomPersonnage.x - decalageX, nomPersonnage.y - decalageY, nomInterpolation[mouvementInterpolation][indexSprite][2], nomInterpolation[mouvementInterpolation][indexSprite][3]);
-      // le decalage x et y sert a recentrer le sprite sur la hitbox de Dave
+        ctx.drawImage(nomSprite.contenu, nomInterpolation[mouvementInterpolation][indexSprite][0], nomInterpolation[mouvementInterpolation][indexSprite][1], nomInterpolation[mouvementInterpolation][indexSprite][2], nomInterpolation[mouvementInterpolation][indexSprite][3], nomPersonnage.x - decalageX, nomPersonnage.y - decalageY, nomInterpolation[mouvementInterpolation][indexSprite][2], nomInterpolation[mouvementInterpolation][indexSprite][3]);
+        // le decalage x et y sert a recentrer le sprite sur la hitbox de Dave
 
       // pour annuler l'alpha sur le contexte
       if (dave.degat && indexSprite % 2) {
@@ -926,6 +927,7 @@ function jeuDave () {
 
     // FONCTION ANIMATION DU HIT
     // dave.hit reste true pendant la duree de la "vitesse"
+    // permet de donner une durée à la frappe
     var timestampHit;
 
     function animationHit(timestamp, vitesse) {
@@ -987,8 +989,8 @@ function jeuDave () {
       dave.x += 5; // deplacement x
 
       // bloquage de dave en milieu de canvas et
-      // déplacement des éléments du background
       // déplacement de la caméra
+      // déplacement des éléments du background
       if (dave.x > (canvas.width / 2) - (dave.largeur / 2) && camera.x > -7708) {
         dave.x = (canvas.width / 2) - (dave.largeur / 2);
         camera.x -= 6;
@@ -1007,8 +1009,8 @@ function jeuDave () {
       dave.x -= 5; // deplacement x
 
       // bloquage de dave en milieu de canvas et
-      // déplacement des éléments du background
       // déplacement de la caméra
+      // déplacement des éléments du background
       if (dave.x < (canvas.width / 2) - (dave.largeur / 2) && camera.x <= -1) {
         dave.x = (canvas.width / 2) - (dave.largeur / 2);
         camera.x += 6;
@@ -1076,7 +1078,7 @@ function jeuDave () {
       ]
     };
 
-    // FONCTION ANIMATION TOUS SPRITES
+    // FONCTION ANIMATION TOUS MOUVEMENTS DES ENNEMIS SPRITES
 
     var timestampTemoinSlime;
     var timestampTemoinSlimeDeath;
@@ -1173,7 +1175,7 @@ function jeuDave () {
 
     // Déclaration des slimes
     // new slime (position x de départ, position y de départ, distance parcouru par le mob sur sa "routine de déplacement")
-    // valeur négative car son premier déplacement est un retour
+    // valeur négative car son premier déplacement est un retour vers la gauche
     var slime1 = new slime(1300, 369, -640);
     var slime2 = new slime(1275, 81, -220);
     var slime3 = new slime(1590, 304, -310);
@@ -1366,7 +1368,7 @@ function jeuDave () {
               ctx.restore();
 
               } else {
-                
+                // Si toutes les potions n'ont PAS été récupérées
                 // verif du nombre potions à récupérer pour débloquer le coffre
                 var compteurPotions = 5;
 
@@ -1394,7 +1396,7 @@ function jeuDave () {
                   potionsPluriels = " potions"
                 }
 
-                // affichage d'un texte "il vous manque X potions"
+                // affichage d'un texte "il vous manque X potions" lorsqu'on arrive au coffre
                 ctx.save();
                 ctx.drawImage(bulle.contenu, 405, 100);
                 ctx.fillStyle = "rgb(68, 27, 52)";
@@ -1416,8 +1418,8 @@ function jeuDave () {
     };
 
     // EFFET FLOTTEMENT DES POTIONS
-    var posPotion = 0.2; // varuables appelées dans le requestAnimationFrame pour faire varier le Y des potions
-    var evolution = 0.2; // varuables appelées dans le requestAnimationFrame pour faire varier le Y des potions
+    var posPotion = 0.2; // variables appelées dans le requestAnimationFrame pour faire varier le Y des potions
+    var evolution = 0.2; // variables appelées dans le requestAnimationFrame pour faire varier le Y des potions
 
     ///////////////////////////////////////////////////////////////
     /////                       GAME OVER                      /////
@@ -1468,6 +1470,7 @@ function jeuDave () {
     ///////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////
 
+
     var boucle = function (timestamp) {
 
       // clear du canvas
@@ -1477,49 +1480,46 @@ function jeuDave () {
       /////                  BACKGROUND PARALLAX                /////
       ///////////////////////////////////////////////////////////////
 
-      (function drawBg() {
+      ctx.fillStyle = 'rgb(132, 180, 225)'; // ciel fixe
+      ctx.fillRect(0, 0, canvas.width, canvas.height); // ciel fixe
 
-        ctx.fillStyle = 'rgb(132, 180, 225)'; // ciel fixe
-        ctx.fillRect(0, 0, canvas.width, canvas.height); // ciel fixe
-
-        ctx.drawImage(bgNuagesFond.contenu, bgNuagesFond.x, -60);
-        ctx.drawImage(bgNuagesFond.contenu, (bgNuagesFond.x + canvas.width) - 1, -60);
-        bgNuagesFond.x -= 0.2;
-        if (bgNuagesFond.x < -canvas.width) {
-          bgNuagesFond.x = 0;
-        }
-        ctx.drawImage(bgMontagnes.contenu, bgMontagnes.x, -20);
-        ctx.drawImage(bgMontagnes.contenu, (bgMontagnes.x + canvas.width) - 1, -20);
-        ctx.drawImage(bgNuageSeul.contenu, bgNuageSeul.x, 90); // appelle une fois car pas besoin d'un double visuel (nuage seul)
-        bgNuageSeul.x -= 0.6;
-        if (bgNuageSeul.x < -1800) { // attendre qu'il soit suffisamment loin pour le rappeler
-          bgNuageSeul.x = canvas.width; // decalage au rappel car le nuage est au milieu du sprite
-        }
-        ctx.drawImage(bgNuageAvantMontagne.contenu, bgNuageAvantMontagne.x, -40);
-        ctx.drawImage(bgNuageAvantMontagne.contenu, (bgNuageAvantMontagne.x + canvas.width) - 1, -40);
-        bgNuageAvantMontagne.x -= 0.1;
-        if (bgNuageAvantMontagne.x < -canvas.width) {
-          bgNuageAvantMontagne.x = 0;
-        }
-        ctx.drawImage(bgSolArrierePlan.contenu, bgSolArrierePlan.x, -20);
-        if (bgSolArrierePlan.x < -1800) { // attendre qu'il soit suffisamment loin pour le rappeler
-          bgSolArrierePlan.x = canvas.width;
-        }
-        ctx.drawImage(bgNuagesSecondPlan.contenu, bgNuagesSecondPlan.x, -20);
-        ctx.drawImage(bgNuagesSecondPlan.contenu, (bgNuagesSecondPlan.x + canvas.width) - 1, -20);
-        bgNuagesSecondPlan.x -= 0.2;
-        if (bgNuagesSecondPlan.x < -canvas.width) {
-          bgNuagesSecondPlan.x = 0;
-        }
-        ctx.drawImage(bgForet.contenu, bgForet.x, 130);
-        ctx.drawImage(bgForet.contenu, (bgForet.x + canvas.width) - 1, 130);
-        ctx.drawImage(bgNuagesPremierPlan.contenu, bgNuagesPremierPlan.x, -20);
-        ctx.drawImage(bgNuagesPremierPlan.contenu, (bgNuagesPremierPlan.x + canvas.width) - 1, -20);
-        bgNuagesPremierPlan.x -= 0.4;
-        if (bgNuagesPremierPlan.x < -canvas.width) {
-          bgNuagesPremierPlan.x = 0;
-        }
-      }());
+      ctx.drawImage(bgNuagesFond.contenu, bgNuagesFond.x, -60);
+      ctx.drawImage(bgNuagesFond.contenu, (bgNuagesFond.x + canvas.width) - 1, -60);
+      bgNuagesFond.x -= 0.2;
+      if (bgNuagesFond.x < -canvas.width) {
+        bgNuagesFond.x = 0;
+      }
+      ctx.drawImage(bgMontagnes.contenu, bgMontagnes.x, -20);
+      ctx.drawImage(bgMontagnes.contenu, (bgMontagnes.x + canvas.width) - 1, -20);
+      ctx.drawImage(bgNuageSeul.contenu, bgNuageSeul.x, 90); // appelle une fois car pas besoin d'un double visuel (nuage seul)
+      bgNuageSeul.x -= 0.6;
+      if (bgNuageSeul.x < -1800) { // attendre qu'il soit suffisamment loin pour le rappeler
+        bgNuageSeul.x = canvas.width; // decalage au rappel car le nuage est au milieu du sprite
+      }
+      ctx.drawImage(bgNuageAvantMontagne.contenu, bgNuageAvantMontagne.x, -40);
+      ctx.drawImage(bgNuageAvantMontagne.contenu, (bgNuageAvantMontagne.x + canvas.width) - 1, -40);
+      bgNuageAvantMontagne.x -= 0.1;
+      if (bgNuageAvantMontagne.x < -canvas.width) {
+        bgNuageAvantMontagne.x = 0;
+      }
+      ctx.drawImage(bgSolArrierePlan.contenu, bgSolArrierePlan.x, -20);
+      if (bgSolArrierePlan.x < -1800) { // attend qu'il soit suffisamment loin pour le rappeler
+        bgSolArrierePlan.x = canvas.width;
+      }
+      ctx.drawImage(bgNuagesSecondPlan.contenu, bgNuagesSecondPlan.x, -20);
+      ctx.drawImage(bgNuagesSecondPlan.contenu, (bgNuagesSecondPlan.x + canvas.width) - 1, -20);
+      bgNuagesSecondPlan.x -= 0.2;
+      if (bgNuagesSecondPlan.x < -canvas.width) {
+        bgNuagesSecondPlan.x = 0;
+      }
+      ctx.drawImage(bgForet.contenu, bgForet.x, 130);
+      ctx.drawImage(bgForet.contenu, (bgForet.x + canvas.width) - 1, 130);
+      ctx.drawImage(bgNuagesPremierPlan.contenu, bgNuagesPremierPlan.x, -20);
+      ctx.drawImage(bgNuagesPremierPlan.contenu, (bgNuagesPremierPlan.x + canvas.width) - 1, -20);
+      bgNuagesPremierPlan.x -= 0.4;
+      if (bgNuagesPremierPlan.x < -canvas.width) {
+        bgNuagesPremierPlan.x = 0;
+      }
 
       ///////////////////////////////////////////////////////////////
       /////                     DECOR & OBJETS                  /////
@@ -1531,48 +1531,48 @@ function jeuDave () {
       drawMap(terrainPremierPlan);
 
       // ARBRES
-      (function () { // ENGLOBE FONCTION A SUPPRIMER //
-        drawElementFixe(arbres.contenu, 450, 0, 150, 256, -35, -192, 150, 256);
-        drawElementFixe(arbres.contenu, 300, 0, 150, 256, 1090, 160, 150, 256);
-        drawElementFixe(arbres.contenu, 600, 0, 150, 256, 1025, -128, 150, 256);
-        drawElementFixe(arbres.contenu, 150, 0, 150, 256, 1550, 96, 150, 256);
+      drawElementFixe(arbres.contenu, 450, 0, 150, 256, -35, -192, 150, 256);
+      drawElementFixe(arbres.contenu, 300, 0, 150, 256, 1090, 160, 150, 256);
+      drawElementFixe(arbres.contenu, 600, 0, 150, 256, 1025, -128, 150, 256);
+      drawElementFixe(arbres.contenu, 150, 0, 150, 256, 1550, 96, 150, 256);
 
-        drawElementFixe(arbres.contenu, 300, 0, 150, 256, 2624, -96, 150, 256);
-        drawElementFixe(arbres.contenu, 0, 0, 150, 256, 2540, -128, 150, 256);
-        drawElementFixe(arbres.contenu, 450, 0, 150, 256, 1916, 96, 150, 256);
-        drawElementFixe(arbres.contenu, 450, 0, 150, 256, 3700, 192, 150, 256);
-        drawElementFixe(arbres.contenu, 150, 0, 150, 256, 3944, -96, 150, 256);
-        drawElementFixe(arbres.contenu, 0, 0, 150, 256, 4562, 128, 150, 256);
-        drawElementFixe(arbres.contenu, 300, 0, 150, 256, 4956, -64, 150, 256);
-        drawElementFixe(arbres.contenu, 0, 0, 150, 256, 5738, 96, 150, 256);
-        drawElementFixe(arbres.contenu, 600, 0, 150, 256, 6150, 96, 150, 256);
-        drawElementFixe(arbres.contenu, 450, 0, 150, 256, 6090, 96, 150, 256);
-        drawElementFixe(arbres.contenu, 150, 0, 150, 256, 6880, 0, 150, 256);
+      drawElementFixe(arbres.contenu, 300, 0, 150, 256, 2624, -96, 150, 256);
+      drawElementFixe(arbres.contenu, 0, 0, 150, 256, 2540, -128, 150, 256);
+      drawElementFixe(arbres.contenu, 450, 0, 150, 256, 1916, 96, 150, 256);
+      drawElementFixe(arbres.contenu, 450, 0, 150, 256, 3700, 192, 150, 256);
+      drawElementFixe(arbres.contenu, 150, 0, 150, 256, 3944, -96, 150, 256);
+      drawElementFixe(arbres.contenu, 0, 0, 150, 256, 4562, 128, 150, 256);
+      drawElementFixe(arbres.contenu, 300, 0, 150, 256, 4956, -64, 150, 256);
+      drawElementFixe(arbres.contenu, 0, 0, 150, 256, 5738, 96, 150, 256);
+      drawElementFixe(arbres.contenu, 600, 0, 150, 256, 6150, 96, 150, 256);
+      drawElementFixe(arbres.contenu, 450, 0, 150, 256, 6090, 96, 150, 256);
+      drawElementFixe(arbres.contenu, 150, 0, 150, 256, 6880, 0, 150, 256);
 
-        // clairiere
-        drawElementFixe(arbres.contenu, 0, 0, 150, 256, 7980, 128, 150, 256);
-        drawElementFixe(arbres.contenu, 300, 0, 150, 256, 7920, 128, 150, 256);
-        drawElementFixe(arbres.contenu, 150, 0, 150, 256, 8045, 128, 150, 256);
-        drawElementFixe(arbres.contenu, 0, 0, 150, 256, 8510, 128, 150, 256);
-        drawElementFixe(arbres.contenu, 600, 0, 150, 256, 8420, 128, 150, 256);
-        drawElementFixe(arbres.contenu, 450, 0, 150, 256, 8480, 128, 150, 256);
+      // clairiere
+      drawElementFixe(arbres.contenu, 0, 0, 150, 256, 7980, 128, 150, 256);
+      drawElementFixe(arbres.contenu, 300, 0, 150, 256, 7920, 128, 150, 256);
+      drawElementFixe(arbres.contenu, 150, 0, 150, 256, 8045, 128, 150, 256);
+      drawElementFixe(arbres.contenu, 0, 0, 150, 256, 8510, 128, 150, 256);
+      drawElementFixe(arbres.contenu, 600, 0, 150, 256, 8420, 128, 150, 256);
+      drawElementFixe(arbres.contenu, 450, 0, 150, 256, 8480, 128, 150, 256);
 
-        drawMap(terrainHerbe);
+      drawMap(terrainHerbe); // une tile map décalée car elle doit apparaaitre au dessus des éléments précédents
 
-        drawElementFixe(arbres.contenu, 0, 0, 150, 256, 585, 160, 150, 256);
-        drawElementFixe(arbres.contenu, 600, 0, 150, 256, 3236, -96, 150, 256);
-      }());
+      drawElementFixe(arbres.contenu, 0, 0, 150, 256, 585, 160, 150, 256);
+      drawElementFixe(arbres.contenu, 600, 0, 150, 256, 3236, -96, 150, 256);
 
       // FEU DE CAMP
       animationFeu(timestamp, objetFeu, feu, interpolationsFeu, 'static', 0, 0, 100, 0.8);
 
       // COFFRE DE FIN
+      // animation du fermé ou ouvert suivant le nombre de potions récupérées
       if (!objetCoffre.unlock){
         animationCoffre(timestamp, objetCoffre, coffre, interpolationsCoffre, 'static', 0, 0, 100, 0.4);
       } else {
         animationCoffre(timestamp, objetCoffre, coffre, interpolationsCoffre, 'opening', 0, 0, 100, 0.4);
       }
 
+      // affichage du cv si coffre ouvert
       if (objetCv.unlock){
       drawElementFixe(holyCv.contenu, 0, 0, 60, 72, objetCv.x, objetCv.y + posPotion, objetCv.w, objetCv.h);
       }
@@ -1670,14 +1670,12 @@ function jeuDave () {
       drawPotionsHudEtMap("potionVioletteRecup", 4, xPremierePotion - 10, decalagePotion, 4, 9, 32, 32, "node", "rgb(181, 80, 136)", 861, 55);
 
       ///////////////////////////////////////////////////////////////
-      /////                   REPONSES KEYDOWN                  /////
+      /////                 REPONSES AUX KEYPRESS               /////
       ///////////////////////////////////////////////////////////////
+
       if (dave.vivant) {
       // VERIFIE LA COMBINAISON DE TOUCHES ACTIVE
       controls.checkDirection();
-
-      // CHECK DAVE VIVANT
-      // if (dave.vivant) {
 
         /////// HAUT DROITE
         if (controls.direction === 'hautDroite') {
@@ -1856,7 +1854,6 @@ function jeuDave () {
         };
         // IF HIT, PASSE LE HIT A FALSE AU BOUT DE X MILLISECONDES
         if (dave.hit === true) {
-
           animationHit(timestamp, 475);
         };
 
@@ -1892,9 +1889,9 @@ function jeuDave () {
       // SI DAVE EST MORT
       if (!dave.vivant) {
         dave.degat = false; // fin des dégats
-        dave.sante = [];
+        dave.sante = []; // santé à zéro
         animationDeath(timestamp, 100); // affichage du screen de Death
-        if (resetAnimation){
+        if (resetAnimation){ // reset du compteur de frame pour assurer que l'anim se lance bien à 0
           indexSprite = 0;
           resetAnimation = false;
         }
@@ -1941,8 +1938,8 @@ function jeuDave () {
     };
 
     // INITIALISATION DES EVENT LISTENERS
-    window.addEventListener('keydown', controls.keyUpOrDown);
-    window.addEventListener('keyup', controls.keyUpOrDown);
+    window.addEventListener('keydown', controls.keyUpOrDown, true);
+    window.addEventListener('keyup', controls.keyUpOrDown, true);
 
     // SNIPPET COMPATIBILITE REQUESTANIMATIONFRAME
     if ( !window.requestAnimationFrame ) {

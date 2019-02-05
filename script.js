@@ -71,4 +71,4 @@ window.addEventListener('DOMContentLoaded', function () {
 
   jeuDave();
 
-});
+}, true);

@@ -243,9 +243,15 @@ object {
 	/* //////////// CANVAS //////////// */
 
 	#canvas {
-		height: 149px;
-		width: 280px;
-	}
+		border: none;
+		border-radius:0;
+		-webkit-border-radius:0;
+		-moz-border-radius:0;
+		-ms-border-radius:0;
+		-o-border-radius:0;
+		margin-bottom: 15px;
+		width: 100%;
+}
 
 	/* //////////// VIEWER PDF //////////// */
 
